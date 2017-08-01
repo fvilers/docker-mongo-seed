@@ -2,6 +2,9 @@
   "name": "docker-mongo-seed",
   "version": "0.0.0",
   "description": "A Docker image to seed a Mongo database",
+  "scripts": {
+    "start": "docker build -t fvilers/mongo-seed ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fvilers/docker-mongo-seed.git"
