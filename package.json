@@ -1,0 +1,19 @@
+{
+  "name": "docker-mongo-seed",
+  "version": "0.0.0",
+  "description": "A Docker image to seed a Mongo database",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fvilers/docker-mongo-seed.git"
+  },
+  "keywords": [
+    "Docker",
+    "Mongo"
+  ],
+  "author": "Fabian Vilers <fabian.vilers@dev-one.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fvilers/docker-mongo-seed/issues"
+  },
+  "homepage": "https://github.com/fvilers/docker-mongo-seed#readme"
+}
