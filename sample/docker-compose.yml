@@ -1,17 +1,20 @@
 version: '3'
 
 services:
-  mongo:
-    image: mongo:3.4
-    ports:
-      - 27017:27017
-  
   mongo-seed:
     build: ..
     image: fvilers/mongo-seed
-    # depends_on:
-    #   - mongo
+    # Not using depends_on to demonstrate that the container will wait before
+    # execute the command
+    environment:
+      - MONGO_HOST=mongo
+      - MONGO_PORT=27017
     volumes:
       - ./data:/data
     command:
       "mongoimport --host mongo --port 27017 --db test --mode upsert --type json --file /data/people.json --jsonArray"
+
+  mongo:
+    image: mongo:3.4
+    ports:
+      - 27017:27017
