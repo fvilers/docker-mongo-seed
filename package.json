@@ -4,7 +4,11 @@
   "description": "A Docker image to seed a Mongo database",
   "scripts": {
     "start": "docker run fvilers/mongo-seed",
-    "build": "docker build -t fvilers/mongo-seed ."
+    "build": "docker build -t fvilers/mongo-seed .",
+    "tag": "cross-var \"docker tag fvilers/mongo-seed fvilers/mongo-seed:$npm_package_version\"",
+    "deploy": "cross-var \"docker push fvilers/mongo-seed:$npm_package_version\"",
+    "version": "npm run build && npm run tag",
+    "postversion": "npm run deploy && git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -19,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/fvilers/docker-mongo-seed/issues"
   },
-  "homepage": "https://github.com/fvilers/docker-mongo-seed#readme"
+  "homepage": "https://github.com/fvilers/docker-mongo-seed#readme",
+  "devDependencies": {
+    "cross-var": "1.0.3"
+  }
 }
