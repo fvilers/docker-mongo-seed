@@ -3,8 +3,8 @@ A Docker image to seed a Mongo database
 
 # How to use
 - Create a docker-compose file and add a `mongo-seed` service.
-- Set the environment variables `MONGO_HOST`and `MONGO_PORT` accordingly to you stack.
-- Eventually, set the a volume to share files you want to use
+- Set the environment variables `MONGO_HOST`and `MONGO_PORT` accordingly to your stack.
+- Optionally, set the a volume to share files you want to use
 - Add a command to import your data
 
 # Sample docker-compose.yml
