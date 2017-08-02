@@ -1,3 +1,5 @@
+#!/bin/sh
+
 : ${MONGO_HOST:=mongo}
 : ${MONGO_PORT:=27017}
 
